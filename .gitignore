@@ -1,0 +1,4 @@
+/.nb-db-postgres
+/.nb-metabase
+docker-compose.yml
+requirements.txt

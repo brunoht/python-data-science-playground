@@ -1,0 +1,12 @@
+#! /bin/bash
+
+case $1 in
+build) docker-compose up -d --build ;;
+up) docker-compose up -d ;;
+down) docker-compose down ;;
+restart) docker-compose down && docker-compose up -d ;;
+cmd) docker exec -it nb-python-playground bash ;;
+log) docker-compose logs -f ;;
+clear) docker-compose down --remove-orphans ;;
+*) echo "Comando não encontrado" ;;
+esac

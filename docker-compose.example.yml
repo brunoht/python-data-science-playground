@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+
+  nb-app:
+    container_name: nb-python-playground
+    build: .
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app
+    networks:
+      - nb_network
+
+  # nb-adminer:
+  #   image: adminer
+  #   container_name: nb-adminer
+  #   restart: always
+  #   ports:
+  #     - 8080:8080
+  #   networks:
+  #     - nb_network
+
+  # nb-database:
+  #   image: postgres
+  #   container_name: nb-db-postgres
+  #   restart: always
+  #   environment:
+  #     - POSTGRES_PASSWORD=nbdb
+  #     - POSTGRES_DB=nbdb
+  #   volumes:
+  #     - ./.nb-db-postgres:/var/lib/postgresql/data
+  #   ports:
+  #     - 5432:5432
+  #   networks:
+  #     - nb_network
+
+  # nb-metabase:
+  #   image: metabase/metabase:latest
+  #   container_name: nb-metabase
+  #   hostname: nb-metabase
+  #   volumes:
+  #   - ./.nb-metabase:/metabase.db
+  #   ports:
+  #     - 3000:3000
+  #   networks:
+  #     - nb_network
+
+networks:
+    nb_network:
+        name: nb_network
+        driver: bridge
+  
