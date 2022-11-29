@@ -29,6 +29,8 @@ Fornece todas as principais ferramentas e bibliotecas utilizadas no Data Science
 - Pandas
 - Numpy
 - Seaborn
+- Scikit Learn
+- muito mais...
 
 E apesar de já estarem incluídos por padrão, nada impede do usuário deste projeto adicionar ou remover qualquer biblioteca ou dependência conforme sua necessidade ou interesse.
 
@@ -72,10 +74,8 @@ Os arquivos salvos neste diretório não serão enviados para o Git.
 Sempre que iniciar um notebook lembre-se de adicionar a variável data_path e a função data() ao seu notebook para obter os datasets a partir do diretório correto.
 
 ```python
-data_path = "../data/"
-
 def data(content):
-    return data_path + content
+    return "/app/data/" + content
 ```
 
 ## Bibliotecas Próprias
@@ -108,27 +108,17 @@ Utilize o VSCode (Visual Studio Code) da Microsoft como IDE do projeto.
 
 #### Extenções Recomendadas
 
-```txt
-Nome: Dev Containers
-ID: ms-vscode-remote.remote-containers
-Descrição: Open any folder or repository inside a Docker container and take advantage of Visual Studio Code's full feature set.
-Versão: 0.262.3
-Editor: Microsoft
-Link do Marketplace do VS: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
+Local
 
-Nome: Docker
-ID: ms-azuretools.vscode-docker
-Descrição: Makes it easy to create, manage, and debug containerized applications.
-Versão: 1.22.2
-Editor: Microsoft
-Link do Marketplace do VS: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+```shell
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-vscode-remote.remote-containers
+```
 
-Nome: Python Extension Pack
-ID: donjayamanne.python-extension-pack
-Descrição: Popular Visual Studio Code extensions for Python
-Versão: 1.7.0
-Editor: Don Jayamanne
-Link do Marketplace do VS: https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-extension-pack
+Container
+
+```shell
+code --install-extension donjayamanne.python-extension-pack
 ```
 
 ## Comandos Básicos
