@@ -8,3 +8,7 @@ jupyter
 notebook
 ipykernel
 pip
+scikit-learn
+pydot
+gprof2dot
+graphviz
