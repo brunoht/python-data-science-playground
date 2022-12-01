@@ -5,7 +5,7 @@ build) docker-compose up -d --build ;;
 up) docker-compose up -d ;;
 down) docker-compose down ;;
 restart) docker-compose down && docker-compose up -d ;;
-cmd) docker exec -it nb-python-playground bash ;;
+cmd) docker exec -it lohl-manager-data-playground_nb-app_1 bash ;;
 log) docker-compose logs -f ;;
 clear) docker-compose down --remove-orphans ;;
 *) echo "Comando não encontrado" ;;
