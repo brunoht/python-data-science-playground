@@ -1,6 +1,7 @@
 ### 0.0.2
 - Preparação do ambiente de desenvolvimento
 - Criação da branch do projeto lohl-manager-data
+- Migrations de Clients, Products e Receivables
 
 ### 0.0.1
 - Criação da versão beta do playground de data science
